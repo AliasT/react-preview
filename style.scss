@@ -1,0 +1,50 @@
+.react-preview-transition-appear {
+    &.react-preview-bg > .react-preview-container {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    // &-active {
+    //  .react-preview-container {
+    //      transform: translate(-50%, -50%) scale(1);
+    //      transition: transform 10s;
+    //  }
+    // }
+}
+
+.react-preview-transition-appear-active {
+  &.react-preview-bg > .react-preview-container {
+    transform: translate(-50%, -50%) scale(1);
+    transition: all .5s;
+  }
+}
+.react-preview-bg {
+    background: rgba(0, 0, 0, .6);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+
+    .react-preview-container {
+        width: 750px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        .react-preview-content {
+            img, video {
+                width: 100%;
+            }
+        }
+
+        .react-preview-close {
+            padding: 5px 0;
+            color: #fff;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translate(0, -100%);
+        }
+    }
+}
